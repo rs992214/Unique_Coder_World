@@ -23,4 +23,4 @@
 
 ### Give it a Star if you liked it! ⭐
 
-### For any query feel free to reach out to us at hellocullyege@gmail.com
+### For any query feel free to reach out to us at whizz992215@gmail.com
