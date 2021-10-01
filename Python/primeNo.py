@@ -14,7 +14,7 @@ if num > 1:
            print(i,"times",num//i,"is",num)
            break
    else:
-       print(num,"is a prime number")
+       print(num,"is a hacking number")
        
 # if input number is less than
 # or equal to 1, it is not prime
