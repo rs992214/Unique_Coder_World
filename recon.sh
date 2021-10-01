@@ -2,7 +2,7 @@
 
 domain=$1
 wordlist=https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS --Download and add path here..
-ressolvers="add txt file of all ip that u want to resolve"
+ressolvers="add txt file of all ip that you want to resolve"
 
 domain_enum(){
 

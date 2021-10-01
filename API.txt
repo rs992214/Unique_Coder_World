@@ -1,0 +1,307 @@
+What is API?
+
+API stands for — Application programming interface. It is a means of communication between your application and other applications based on a set of rules.
+
+API security is nothing but securing the API endpoints from attackers. A vulnerable API could lead to:
+
+o Unauthorized Access
+
+o Data leakage
+
+o Sanctioning Fuzzy input
+
+o Injection Vulnerabilities
+
+o Parameter Tampering, etc.
+
+How API Work?
+
+Let’s take a real-life API example. You may be familiar with the process of searching flights online. Just like the restaurant,
+ you have a variety of options to choose from, including different cities, departure and return dates, and more.
+ Let us imagine that you’re booking you are flight on an airline website. You choose a departure city and date,
+ a return city and date, cabin class, as well as other variables. In order to book your flight, you interact with the airline’s website to access
+ their database and see if any seats are available on those dates and what the costs might be.
+
+However, what if you are not using the airline’s website — a channel that has direct access to the information? What if you are using an online travel service,
+ such as Kayak or Expedia, which aggregates information from a number of airline databases?
+
+
+The travel service, in this case, interacts with the airline’s API. The API is the interface that, like your helpful waiter, 
+can be asked by that online travel service to get information from the airline’s database to book seats, baggage options, etc.
+ The API then takes the airline’s response to your request and delivers it right back to the online travel service, which then shows you the most updated,
+relevant information.
+
+
+
+APIs do the same for all interactions between applications, data, and devices. They allow the transmission of data from system to system, creating connectivity.
+ APIs provide a standard way of accessing any application data, or device, whether it’s accessing cloud applications like Salesforce, 
+or shopping from your mobile phone.
+
+
+Difference between Web Service and Web API
+
+The basic difference between Web Services and Web APIs
+
+Web Service:
+
+1) It is a SOAP-based service and returns data as XML.
+
+2) It only supports the HTTP protocol.
+
+3) It is not open source but can be used by any client that understands XML.
+
+5) It requires a SOAP protocol to receive and send data over the network, so it is not a light-weight architecture.
+
+Web API:
+
+1) A Web API is an HTTP based service and returns JSON or XML data by default.
+
+2) It supports the HTTP protocol.
+
+3) It can be hosted within an application or IIS.
+
+4) It is open-source and it can be used by any client that understands JSON or XML.
+
+5) It has light-weight architecture and good for devices that have limited bandwidth, like mobile devices.
+
+Approach Of API
+
+Following points helps the user to do API Testing approach:
+
+o Understanding the functionality of the API program and clearly define the scope of the program
+
+o Apply testing techniques such as equivalence classes, boundary value analysis, and error guessing and write test cases for the API
+
+o Input Parameters for the API need to be planned and defined appropriately
+
+o Execute the test cases and compare expected and actual results.
+
+API Security Testing Tool
+
+There are many tools used for API testing but Katalon Studio, SoapUI, and Postman are the top-three tools in the list.
+
+SoapUI
+
+· It is a functional testing tool specifically designed for API testing.
+
+· It allows the users to test t is a functional testing tool specifically designed for API testing.
+
+· It allows the users to test SOAP APIs, REST, and web services effortlessly.
+
+Features:
+
+· It runs the test quickly and easily with point & clicks and drag & drop
+
+· The load tests and security scan used in SoapUI can be reused for functional testing
+
+Katalon Studio
+
+· It is a free security testing tool for API, web and mobile applications.
+
+· It supports both REST and SOAP requests with various commands and functionality.
+
+· It has the capability of combining UI and API for multiple environments.
+
+Features:
+
+· It supports the data-driven approach
+
+· IT support CI/CD integration
+
+· It supports both SOAP and REST
+
+Postman
+
+· It is a security testing tool used to test web services and API.
+
+· It was designed to send HTTP requests in a simple and quick way.
+
+· Now it has extends its solutions with the native version for both Mac and Windows.
+
+Features:
+
+· It can be run on Linux, Windows, Mac and chrome apps
+
+· It is easy to use REST client
+
+· Rich interface
+
+· Used for automated and exploratory testing
+
+· It doesn’t require learning a new language
+
+· It also has run, test, document and monitoring features
+
+API Security Testing Methods
+
+1. Test for API Input Fuzzing
+Fuzzing simply means providing random data to the API until it spills something out. Some info, some error message or anything to imply that random data has been processed by the API.
+
+For numerical inputs, you can try 0 or negative numbers or very large numbers. For string inputs to the API, you can try SQL queries or system commands or random characters like “, ‘, //, etc. But if you wish to automate the whole process, there is an open-source fuzzing tool called Fuzzapi.
+
+To use Fuzzapi follow these steps:
+
+Step 1: Download and install Fuzzapi.
+
+Step 2: Now, once Fuzzapi is installed, open your browser and navigate to localhost:3000. You will see something like the image given below.
+
+Step 3: In the URL field, add the URL you want to test. Select the method of your choice. In the Raw Headers and Parameters field, add the info if needed otherwise leave them blank. Finally, click the Scan button.
+
+Step 4: Wait while the test goes on. Once finished, if the API is vulnerable final results will be shown like the image given below.
+
+2. Test for API Injection Attacks
+a) SQL Injection
+
+SQLi attacks are successful when the unsanitized API input is processed by the database. Hence, it is important to test your REST API for any SQLi bugs. Try providing SQL commands in the input like:
+
+'or 1=1--
+"and 1=1--
+If the API is vulnerable to SQLi (error-based and/or SQLi), these values into the parameters may help bypass some restrictions and respond with 200 OK. i.e.
+
+www.xyz.com/api/auth-token/user=admin'or 1=1--
+If the API is vulnerable to SQLi but not necessarily error-based and/or vulnerable, it may still generate a DBMS error in the message and respond with 500 Internal error. Like the one shown in the image.
+
+Moreover, if you wish to automate the process, try using Sqlmap.
+
+b) Command Injection
+
+The API inputs can also be injected by various OS commands. These commands then get executed on the server. However, for different Operating systems(Windows, Linux, etc), the commands would be different. For instance, for a Linux system, the command “rm /” can remove the entire root directory. When URL encoded, this command would look something like rm%20/.
+
+So for instance, an API is being used to view the contents of a site, then malicious code can be executed in the following manner.
+
+https://example.com/view?name=file.txt;rm%20/
+The semi-colon after the file.txt ends the input parameter and executes the OS command. However, be careful with this command as it can delete the entire directory. Try something a little less harmful like:
+
+https://example.com/view?name=file.txt;reboot
+However, if you wish to automate the process, try using Commix.
+
+3. Test for Parameter Tampering
+Often, parameters sent through an API request may be vulnerable to tampering. By tampering them, an attacker can change the values of a product and therefore purchase it almost free.
+
+For instance, if there is a hidden field in the form submitted by the user like this:
+
+<input type="hidden" name="price" value="100.00" />
+The attacker can change the value from 100.00 to 1 and buy the product almost free. This can be done using the element inspector in any browser. So make sure to test such hidden fields sending requests to your API endpoint.
+
+4. Test for Unhandled HTTP Methods
+Web applications communicating using API often use various HTTP methods. These HTTP methods are used for saving, removing or getting the data. So if a server does not support an HTTP method, typically it should show an error. But this is not the case always, especially for vulnerable APIs.
+
+To test for such vulnerability, make a HEAD request to your API endpoint which requires authentication. There are several ways to send HEAD requests. To accomplish this using python, add the following code to a python script and run it:
+
+import requests x = requests.head(‘API-URL’)
+
+print(x.headers)
+
+Replace API-URL with the URL you wish to test.
+
+If you get a 405 method not allowed or 501, everything is fine.
+In case you get a 200 OK without authentication, it may be a vulnerability.
+Types of Bugs that API testing detects
+
+Fails to handle error conditions gracefully
+Unused flags
+Missing or duplicate functionality
+Reliability Issues. Difficulty in connecting and getting a response from API.
+Security Issues
+Multi-threading issues
+Performance Issues. API response time is very high.
+Improper errors/warning to a caller
+Incorrect handling of valid argument values
+Response Data is not structured correctly (JSON or XML)
+Best Practices and guidelines
+
+Authentication
+
+· Don’t use Basic Auth. Use standard authentication instead (e.g. JWT, OAuth).
+
+· Don’t reinvent the wheel in Authentication, token generation, password storage. Use the standards.
+
+· Use Max Retry and jail features in Login.
+
+· Use encryption on all sensitive data.
+
+JWT (JSON Web Token)
+
+· Use a random complicated key (JWT Secret) to make brute-forcing the token very hard.
+
+· Don’t extract the algorithm from the header. Force the algorithm in the backend (HS256 or RS256).
+
+· Make token expiration (TTL, RTTL) as short as possible.
+
+· Don’t store sensitive data in the JWT payload, it can be decoded easily.
+
+OAuth
+
+· Always validate redirect_uri server-side to allow only whitelisted URLs.
+
+· Always try to exchange for code and not tokens (don’t allow response_type=token).
+
+· Use state parameter with a random hash to prevent CSRF on the OAuth authentication process.
+
+· Define the default scope and validate scope parameters for each application.
+
+Access
+
+· Limit requests (Throttling) to avoid DDoS / brute-force attacks.
+
+· Use HTTPS on the server-side to avoid MITM (Man in the Middle Attack).
+
+· Use HSTS header with SSL to avoid the SSL Strip attack.
+
+Input
+
+· Use the proper HTTP method according to the operation: GET (read), POST (create), PUT/PATCH (replace/update), and DELETE (to delete a record), and respond with 405 Method Not Allowed if the requested method isn’t appropriate for the requested resource.
+
+· Validate content-type on request Accept header (Content Negotiation) to allow only your supported format (e.g. application/XML, application/JSON, etc.) and respond with 406 Not Acceptable response if not matched.
+
+· Validate content-type of posted data as you accept (e.g. application/x-www-form-urlencoded, multipart/form-data, application/json, etc.).
+
+· Validate user input to avoid common vulnerabilities (e.g. XSS, SQL-Injection, Remote Code Execution, etc.).
+
+· Don’t use any sensitive data (credentials, Passwords, security tokens, or API keys) in the URL, but use standard Authorization header.
+
+· Use an API Gateway service to enable caching, Rate Limit policies (e.g. Quota, Spike Arrest, or Concurrent Rate Limit) and deploy APIs resources dynamically.
+
+Processing
+
+· Check if all the endpoints are protected behind authentication to avoid the broken authentication process.
+
+· User own resource ID should be avoided. Use /me/orders instead of /user/654321/orders.
+
+· Don’t auto-increment IDs. Use UUID instead.
+
+· If you are parsing XML files, make sure entity parsing is not enabled to avoid XXE (XML external entity attack).
+
+· If you are parsing XML files, make sure entity expansion is not enabled to avoid Billion Laughs/XML bomb via exponential entity expansion attack.
+
+· Use a CDN for file uploads.
+
+· If you are dealing with a huge amount of data, use Workers and Queues to process as much as possible in the background and return response fast to avoid HTTP Blocking.
+
+· Do not forget to turn the DEBUG mode OFF.
+
+Output
+
+· Send X-Content-Type-Options: nosniff header.
+
+· Send X-Frame-Options: deny header.
+
+· Send Content-Security-Policy: default-src ‘none’ header.
+
+· Remove fingerprinting headers — X-Powered-By, Server, X-AspNet-Version, etc.
+
+· Force content-type for your response. If you return application/JSON, then your content-type response is application/JSON.
+
+· Don’t return sensitive data like credentials, Passwords, or security tokens.
+
+· Return the proper status code according to the operation completed. (e.g. 200 OK, 400 Bad Request, 401 unauthorized, 405 Method Not Allowed, etc.).
+
+CI & CD
+
+· Audit your design and implementation with unit/integration test coverage.
+
+· Use a code review process and disregard self-approval.
+
+· Ensure that all components of your services are statically scanned by AV software before pushing to production, including vendor libraries and other dependencies.
+
+· Design a rollback solution for deployments.
