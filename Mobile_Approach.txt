@@ -1,6 +1,5 @@
 Mobile App Testing Approach (static and dynamic)
 
-
         1. first we get the .apk application file
         2. then its is converted to .zip extension
         3. then the file is extracted 
@@ -37,6 +36,9 @@ Mobile App Testing Approach (static and dynamic)
            b. To list out all the packages installed on the emulator run {app.package.list –f}
            c. {run app.package.info-a com.mwr.example.sieve} (run this command to get the exported component).
            d. exploit them.
+           
+       --> [ Dynamic Aproach ]
+       
         18. SSL Unpinning
            a. download xposed framework. 
            b. then download SSL 2.0 in xposed framework module. 
