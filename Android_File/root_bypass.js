@@ -1,10 +1,11 @@
 // $ frida -l antiroot.js -U -f com.example.app --no-pause
 // CHANGELOG by Pichaya Morimoto (p.morimoto@sth.sh): 
 //  - I added extra whitelisted items to deal with the latest versions 
-// 						of RootBeer/Cordova iRoot as of August 6, 2019
+// 	of RootBeer/Cordova iRoot as of August 6, 2019
 //  - The original one just fucked up (kill itself) if Magisk is installed lol
 // Credit & Originally written by: https://codeshare.frida.re/@dzonerzy/fridantiroot/
 // If this isn't working in the future, check console logs, rootbeer src, or libtool-checker.so
+
 Java.perform(function() {
 
     var RootPackages = ["com.noshufou.android.su", "com.noshufou.android.su.elite", "eu.chainfire.supersu",
