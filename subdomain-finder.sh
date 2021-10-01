@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#Rada
 #COLORS
 BOLD="\e[1mBold"
 NORMAL="\e[0m"
