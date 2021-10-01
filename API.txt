@@ -307,3 +307,7 @@ CI & CD
 · Ensure that all components of your services are statically scanned by AV software before pushing to production, including vendor libraries and other dependencies.
 
 · Design a rollback solution for deployments.
+
+References:
+https://medium.com/data-science-community-srm/introduction-to-apis-d094f2de5307
+https://systemweakness.com/introduction-to-api-penetration-testing-modern-approaches-and-techniques-b8d8c1f7076c
