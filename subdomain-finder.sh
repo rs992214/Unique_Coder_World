@@ -13,11 +13,11 @@ assetfinder --subs-only $1 |sort -u |tee assetfinder.txt
 
 #Sublist3r
 echo -e "${GREEN}[+]Starting Sublist3r"
-python ~/recon/subdomain/Sublist3r/sublist3r.py -d $1 -o sublist3r.txt
+python ~/recon/subdomain/Sublist3r/sublist3r.py -d $1 -o sublister.txt
 
 #Filtering
 echo -e "${GREEN}[+]Starting Filtering"
-cat sublist3r.txt assetfinder.txt | sort -u |uniq -u| grep -v "*" |sort -u|tee Final-Subs.txt
+cat sublist3r.txt assetfinder.txt | sort -u |uniq -u| grep -v "*" |sort -u|tee FinalSubs.txt
 
 #Httprobe
 echo -e "${GREEN}[+]Starting Httprobe"
