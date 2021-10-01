@@ -20,7 +20,7 @@
 ` You need to make 4 pull requests to win an exclusive Hacktoberfest 2020 Tshirt and stickers! `
 
 ` Even if your pull requests aren’t accepted, it should count towards your 4 pull requests (that's necessary to win the swags).`
-
+We have added new automation bash script for recon.
 ### Give it a Star if you liked it! ⭐
 
 ### For any query feel free to reach out to us at rs992214@gmail.com
