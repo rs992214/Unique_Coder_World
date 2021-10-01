@@ -17,9 +17,9 @@
   5. Add your algorithm/code or simply follow the steps mentioned there.
   
 
-` You need to make 4 pull requests to win an exclusive Hacktoberfest 2020 T-shirt and stickers! `
+` You need to make 4 pull requests to win an exclusive Hacktoberfest 2021 T-shirt and stickers! `
 
-` Even if your pull requests aren’t accepted, it should count towards your 4 pull requests (that's necessary to win the swags).`
+
 We have added a new automation bash script for recon.
 We have added new Android Static and Dynamic Testing Approach
 We have added new Android and IOS Static and Dynamic Testing Approach
