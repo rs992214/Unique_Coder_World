@@ -1,5 +1,5 @@
 /*  Android ssl certificate pinning bypass script for various methods
-	by Maurizio Siddu
+	by rahul accept kar de 
 	
 	Run with:
 	frida -U -f [APP_ID] -l frida_multiple_unpinning.js --no-pause
