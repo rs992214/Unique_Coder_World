@@ -1,0 +1,51 @@
+Mobile App Testing Approach (static and dynamic)
+
+
+        1. first we get the .apk application file
+        2. then its is converted to .zip extension
+        3. then the file is extracted 
+        4. use apk tool to decompile apk file  (to use apktool we should install java)
+        5. copy that apk file to apktool folder then run on cmd as apktool d filename.apk
+        6. then a new folder is created with same name
+        7. that apkfolder contains androidmanfiest.xml file and apktool.yml file
+        8. apktool.yml contains
+           a. we need to identify sdkversion which should be 19 or greaterthen 19.
+        9. androidmainfiest.xml contains
+           a. check permission (no write permission should be there)  
+           b. check permission (check on application functionality )                     
+           c. andriod exported components (four) are there.        
+           d. android allow backup should be (false)
+           e. android allow debuggable should be (fase)
+        10. then copy that classes.dex file that we found at extracting the folder.
+        11. then we use dex2jar to convert classes.dex file to converted classes.dex2jar file.
+        12. for converting the file drag and drop the file on d2j-dex2jar file
+        13. then we get executable jar file classes.dexjar.
+        14. now in order to open the file we need a tool called jdgui.
+        15. for that we just open the tool and add the classes.dex2jar file in it.
+        16. now we check  
+           a. source obfuscation of android code should be checked. (it should not visible properly)+
+           b. printStackTrace in Application Source Code (should not be present at code)
+           c. Hard-coded credentials on source code. (username/pass should not be present at code)
+           d. Insecure/deprecated cryptographic algorithms (RC4, MD5, SHA1) on source code. (check it on our codes not on third party)  
+           e. Identify hardcoded key in application or Keys may be intercepted via Binary attacks. (check for keys)
+           f. Identify use of custom encryption protocol. (AES kind of encryption should be present)
+           g. checkServerTrusted with nobody. (key to find ssl pinning is present or not / also check for certificate)
+           h. Value of AllowAllHostnameVerifier (check it in on the code)
+           i. Identify misconfiguration on "android.webkit.WebSettings". 
+        17.   Drozer-- install python {2.7} (used to check for exported file and exploit them)
+           a. install the Drozer in windows.  {to do port forwarding before using drozer}(# adb forward tcp:31415 tcp:31415)
+           b. To list out all the packages installed on the emulator run {app.package.list –f}
+           c. {run app.package.info-a com.mwr.example.sieve} (run this command to get the exported component).
+           d. exploit them.
+        18. SSL Unpinning
+           a. download xposed framework. 
+           b. then download SSL 2.0 in xposed framework module. 
+           c. select any application which have to be unpinned.
+        19. Root bypass
+           a. then download root cloak plus in xposed framework module 
+           b. same as ssl 2.0 select any application for root bypass.
+        20. burp IP setting 
+           a. port and ip of android device and burp should be same of base machine.
+           b. download ca certificate 
+           c. sd card storage rename with extenstion .cer
+           d. In settings go security - install from storage device.  
