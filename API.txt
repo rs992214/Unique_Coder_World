@@ -1,3 +1,5 @@
+-----API------------
+
 What is API?
 
 API stands for — Application programming interface. It is a means of communication between your application and other applications based on a set of rules.
