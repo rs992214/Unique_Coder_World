@@ -28,7 +28,7 @@ class GFG
 			System.arraycopy(array, j, array, j+1, i-j); 
 
 			//Placing element at its correct location 
-			array[j] = x; 
+			array[k] = x; 
 		} 
 	} 
 } 
