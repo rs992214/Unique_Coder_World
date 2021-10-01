@@ -1,0 +1,34 @@
+IOS/ANDROID PENETRATION TESTINH
+--------------------------------------------------
+Static Testing
+ips-iso
+apk-android
+---------------------------
+other proxy tools to caputure the traffic for dynamic testing
+qwaps zap
+fidler
+
+------------------------------------------
+DYNAMIC TESTING:- 
+
+WHY ROOTED AND GENIYMOTION BROKEN TESTED APP COZ WE NEED ADMINISTRATED RIGHTS TO CHECK WHAT HAPPENED EXACTLY
+emulator will help in genimotion
+
+
+SSL PINING
+1) Tool- XPOSED FRAMWORK, SSL TRUST 
+2) MANUAL mETHODS
+FRIDA- rEVERSE ENGG AND RE-BUILD APK
+
+--------------------------------------------------------------------------------------------------------------------------------------
+OWAPS TOP 10 MOBILE APLICATION RISK:
+-----------------------------------------------------------------------
+
+to capture the https trafic we need to go->
+http//:burp
+--------------------------------------
+Mobile settings for burp
+http://burp
+CA CERTIFICATE
+cacert.der->
+to to file managre rename as cacert.cer ten go to security certificate -> get options to install certificate from storage-> then we ablr to capture the https traffic ae wll as.
