@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Getting Clients IP</title>
+
+    <script>
+      fetch("https://api.ipify.io/?format=json")
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (data) {
+          document.getElementById("ip").innerHTML = data.ip;
+        });
+    </script>
+  </head>
+
+  <body>
+    <center>
+      <h1>Your IP Address</h1>
+
+      <h3 id="ip"></h3>
+    </center>
+  </body>
+</html>
