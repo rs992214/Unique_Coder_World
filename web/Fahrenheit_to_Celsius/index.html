@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Fahrenheit to Celsius</h1>
+      <input type="number" id="fahrenheitInput" placeholder="Fahrenheit = " />
+      <button onclick="">convert</button>
+      <p id="fahrenheit"></p>
+    </div>
+  </body>
+  <script type="text/javascript">
+    let fahrenheitInput = document.getElementById("fahrenheitInput");
+    let fahrenheit = document.getElementById("fahrenheit");
+    console.log(fahrenheitInput.value);
+
+    let value = fahrenheitInput.value;
+
+    let celsius = (5 / 9) * (value - 32);
+
+    document.querySelector("button").onclick = function () {
+      fahrenheit.innerHTML = `${value}°F = ${celsius}°C`;
+      console.log(`${value}°F = ${celsius}°C`);
+    };
+  </script>
+</html>
