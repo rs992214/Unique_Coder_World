@@ -1,6 +1,6 @@
 # HACKTOBERFEST 2021
 
-### Hacktoberfest is a month-long virtual festival to celebrate open-source software in partnership with Github. It is celebrated in October every year. All you have to do is contribute to any open-source projects and make at least 4 pull requests within the month of October.
+## Hacktoberfest is a month-long virtual festival to celebrate open-source software in partnership with Github. It is celebrated in October every year. All you have to do is contribute to any open-source projects and make at least 4 pull requests within the month of October.
 
 ### The first 55,000 participants who successfully complete the challenge will be eligible to receive a prize. (Do it soon, let's start! ;) )
 
@@ -22,7 +22,7 @@
 
 We have added a new automation bash script for recon.
 We have added new Android Static and Dynamic Testing Approach
-We have added new Android and IOS Static and Dynamic Testing Approach
+We have added a new Android and IOS Static and Dynamic Testing Approach
 ### Give it a Star if you liked it! ⭐
 
 ### For any query feel free to reach out to us at rs992214@gmail.com

