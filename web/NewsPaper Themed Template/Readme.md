@@ -14,4 +14,4 @@ Github - [@daim-nickel-penny](https://github.com/Daim-Nickel-Penny)
 
 ## Demo
 
-![Working Demo]()
+![Working Demo](https://github.com/Daim-Nickel-Penny/Unique_Coder_World/blob/main/web/NewsPaper%20Themed%20Template/assets/working-demo.png)
