@@ -55,7 +55,7 @@ class GFG {
          
         cycleSort(arr, n);
  
-        Console.Write("After sort : ");
+        Console.Write("After sorting: ");
         for (int i = 0; i < n; i++)
             Console.Write(arr[i] + " ");
     }
