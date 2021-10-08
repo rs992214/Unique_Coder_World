@@ -37,7 +37,7 @@ Tech code ahe
            a. install the Drozer in windows.  {to do port forwarding before using drozer}(# adb forward tcp:31415 tcp:31415)
            b. To list out all the packages installed on the emulator run {app.package.list –f}
            c. {run app.package.info-a com.mwr.example.sieve} (run this command to get the exported component).
-           d. exploit them.
+           d. exploit
            
        --> [ Dynamic Aproach ]
        
