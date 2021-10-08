@@ -6,7 +6,6 @@
 #include<map>
 #include<list>
 #include<set>
-#include<algorithm>
 #include<queue>
 #include<stack>
 #include<cstring>
