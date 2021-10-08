@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fibonacci counter</title>
+</head>
+
+<body>
+  <div>
+    <h1>Fibonacci counter</h1>
+    <input type="number" id="fibonacci-input" placeholder="Fibonacci count..." min={0} />
+    <button onclick="">Count</button>
+    <p id="fibonacci"></p>
+  </div>
+</body>
+<script type="text/javascript">
+  document.querySelector("button").onclick = function () {
+    const input = document.getElementById("fibonacci-input");
+    const fibonacciText = document.getElementById("fibonacci");
+    const value = input.value;
+
+    function fibonacci(n) {
+      return n < 1 ? 0
+        : n <= 2 ? 1
+          : fibonacci(n - 1) + fibonacci(n - 2)
+    }
+
+    const amount = fibonacci(value)
+    fibonacciText.innerHTML = `${value} has ${amount} fibonacci numbers`;
+  };
+</script>
+
+</html>
