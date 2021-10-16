@@ -18,7 +18,7 @@ o Parameter Tampering, etc.
 
 How API Work?
 
-Let’s take a real-life API example. You may be familiar with the process of searching flights online. Just like the restaurant,
+Let’s take a reallife API example. You may be familiar with the process of searching flights online. Just like the restaurant,
  you have a variety of options to choose from, including different cities, departure and return dates, and more.
  Let us imagine that you’re booking you are flight on an airline website. You choose a departure city and date,
  a return city and date, cabin class, as well as other variables. In order to book your flight, you interact with the airline’s website to access
