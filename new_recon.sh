@@ -100,7 +100,7 @@ cat $domain/Recon/httpx.txt | nuclei -t /root/nuclei-templates/generic-detection
 nuclei_vul
 
 jaeles_scan(){
-cat $domain/Recon/httpx.txt | jaeles scan -c 50 -s /tmp/jaeles-signatures/cves -L 50 -v -o $domain/Recon/jaeles/cve.txt
+cat $domain/Recon/httpx.txt | jaeles scan -c 50 -s /tmp/jaeles-signatures/cves -L 50 -v -o $domain/Recon/jaeles/cvee.txt
 cat $domain/Recon/httpx.txt | jaeles scan -c 50 -s /tmp/jaeles-signatures/common -L 50 -v -o $domain/Recon/jaeles/common.txt
 cat $domain/Recon/httpx.txt | jaeles scan -c 50 -s /tmp/jaeles-signatures/fuzz -L 50 -v -o $domain/Recon/jaeles/fuzz.txt
 cat $domain/Recon/httpx.txt | jaeles scan -c 50 -s /tmp/jaeles-signatures/mics -L 50 -v -o $domain/Recon/jaeles/mics.txt
