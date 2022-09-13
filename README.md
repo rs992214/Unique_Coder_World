@@ -1,16 +1,16 @@
-# HACKTOBERFEST 2021
+# HACKTOBERFEST 2022
 
 ## Hacktoberfest is a month-long virtual festival to celebrate open-source software in partnership with Github. It is celebrated in October every year. All you have to do is contribute to any open-source projects and make at least 4 pull requests within the month of October.
 
-### The first 55,000 participants who successfully complete the challenge will be eligible to receive a prize. (Do it soon, let's start! ;) )
+### The first 40,000 participants who successfully complete the challenge will be eligible to receive a prize. (Do it soon, let's start! ;) )
 
-### This is a beginner-friendly repo to help you with open-source contributions. Made specifically for HACKTOBERFEST 2021!
+### This is a beginner-friendly repo to help you with open-source contributions. Made specifically for HACKTOBERFEST 2022!
 
 ### Please check first if your code is already present in this repo, if it's already there then don't add that!
 
 ### How to create pull requests (PRs)?
   1. Sign up or sign in to your <a href="https://github.com/"> Github </a> account.
-  2. Register yourself at <a href="https://hacktoberfest.digitalocean.com/"> Hactoberfest 2021 </a> using your Github account.
+  2. Register yourself at <a href="https://hacktoberfest.digitalocean.com/"> Hactoberfest 2022 </a> using your Github account.
   3. Come back to this <a href="https://github.com/rs992214/Unique_Coder_World"> Hacktoberfest repo</a>.
   4. Click on Fork.
   4. Open the folder of your choice. (If it is not listed, feel free to add one, or simply go to others).
