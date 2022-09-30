@@ -1,4 +1,4 @@
-Mobile App Testing Approach (static and dynamic)
+Mobile App Testing Approach (Static and Dynamic)
 
 
 Tech code ahe 
