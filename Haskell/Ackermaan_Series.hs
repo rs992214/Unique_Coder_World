@@ -10,7 +10,7 @@ ackermann !m !n
 
 
 *Main> :load Ackermann.hs
-[1 of 1] Compiling Main             ( Ackermann.hs, interpreted )
+[1 of 1] Compiling Main             ( Ackermann.hs, interpreted 
 Ok, modules loaded: Main.
 *Main> 
 *Main> ackermann 0 0
