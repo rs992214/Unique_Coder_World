@@ -13,7 +13,7 @@ public class Bubblesort {
 		System.out.println("---Array AFTER Bubble Sort---");  
 		
 		printArray(arr); 
- 
+
 	}  
  	static void bubbleSort(int[] array)
 	{  
