@@ -8,7 +8,7 @@ class GFG {
  
         for (int cycle_start = 0; cycle_start <= n - 2; cycle_start++)
         {
-            int item = arr[cycle_start];
+            int item = arr[cycle_start]
 
             int pos = cycle_start;
             for (int i = cycle_start + 1; i < n; i++)
