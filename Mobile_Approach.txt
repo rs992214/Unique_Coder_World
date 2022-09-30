@@ -53,3 +53,5 @@ Tech code ahe
            b. download ca certificate 
            c. sd card storage rename with extenstion .cer
            d. In settings go security - install from storage device.  
+           
+           We can other tools as well to pentest mobile with virtualization such as androidStudio, NOX, Genymotion etc
