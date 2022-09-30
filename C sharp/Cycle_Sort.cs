@@ -23,7 +23,7 @@ class GFG {
  
             if (pos != cycle_start) {
                 int temp = item;
-                item = arr[pos];
+                item = arr[pos]
                 arr[pos] = temp;
                 writes++;
             }
