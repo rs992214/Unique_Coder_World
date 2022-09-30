@@ -5,7 +5,7 @@ struct node
 	int data;
 	struct node* left, *right;
 };
-struct node* newNode(int data)
+struct node* newNode(int data
 {
 	struct node* new = (struct node*)malloc(sizeof(struct node));
 	new->data = data;
