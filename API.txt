@@ -8,7 +8,7 @@ API security is nothing but securing the API endpoints from attackers. A vulnera
 
 o Unauthorized Access
 
-o Data leakage
+o Data leakages
 
 o Sanctioning Fuzzy input
 
