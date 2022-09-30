@@ -10,7 +10,6 @@ class GFG
 							46, 100, 88, 54 }; 
 
 		new GFG().sort(arr); 
-
 		for(int i=0; i<arr.length; i++) 
 			System.out.print(arr[i]+" "); 
 	} 
