@@ -1,15 +1,16 @@
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
- 
+
 /**
  * Java Program to reverse words in String. There are multiple way to solve this
  * problem. you can either use any collection class like List and reverse the
  * List and later create reverse String by joining individual words.
  *
  * @author Javin Paul
+ * @author Aman Jha
  */
-public class Testing {
+class Testing {
  
   public static void main(String args[]) {
  
@@ -24,8 +25,7 @@ public class Testing {
     StringBuilder sb = new StringBuilder(sentence.length());
  
     for (int i = words.size() - 1; i >= 0; i--) {
-      sb.append(words.get(i));
-      sb.append(' ');
+      sb.append(words.get(i)).append(' ');
     }
  
     return sb.toString().trim();
@@ -40,8 +40,7 @@ public class Testing {
     String[] sa = line.trim().split("\\s");
  
      for (int i = sa.length - 1; i >= 0; i--) {
-        reverse.append(sa[i]);
-        reverse.append(' ');
+        reverse.append(sa[i]).append(' ');
      }
  
      return reverse.toString().trim();
