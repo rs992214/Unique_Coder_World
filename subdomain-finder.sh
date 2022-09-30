@@ -38,3 +38,7 @@ cat $1-alive.txt| aquatone -screenshot-timeout 10 -out screenshots/
 echo -e "${GREEN}[+]Finish"
 
 rm sublist3r.txt assetfinder.txt
+
+#subfinder
+
+echo "target.com" | subfinder -q -o Output.txt
