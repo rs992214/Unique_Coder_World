@@ -14,6 +14,6 @@ for line in lines:
         print(key)
 
 
-key="pentesterlab"
+key="pentest"
 p="eyJ1c2VyIjoiYWRtaW4ifQ"
 print(h+"."+p+"."+sign(h+"."+p,key))
