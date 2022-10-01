@@ -1,4 +1,4 @@
-public class ComplexNumber {
+public class ComplexNumber 
     private double real;
     private double imaginary;
 
