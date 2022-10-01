@@ -9,7 +9,7 @@ struct node* newNode(int data
 {
 	struct node* new = (struct node*)malloc(sizeof(struct node));
 	new->data = data;
-	new->left = new->right = NULL;
+	new-left = new->right = NULL;
 	return new;
 }
 struct node* insert(int a[], struct node* root, int i, int n)
