@@ -3,3 +3,6 @@ float myFloatNum = 5.99f;    // Floating point number
 char myLetter = 'D';         // Character
 boolean myBool = true;       // Boolean
 String myText = "Hello";     // StringJava Data Types
+//for example
+var user= (etc)request.getparameter
+// request comes from user input
