@@ -15,7 +15,7 @@
   4. Click on Fork.
   4. Open the folder of your choice. (If it is not listed, feel free to add one, or simply go to others).
   5. Add your algorithm/code or simply follow the steps mentioned there.
-  
+   
 
 ` You need to make 4 pull requests to win an exclusive Hacktoberfest 2021 T-shirt and stickers! `
 
