@@ -9,7 +9,6 @@ class fibonacci {
             b=c;
         }
         return c;
-    }
 
     public static void main(String args[]) {
         int n=9
