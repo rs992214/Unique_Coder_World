@@ -8,9 +8,9 @@ domain_enum(){
 
 mkdir -p $domain $domain/sources $domain/Recon/ 
 #Passive Enumeration
-subdinder -d domain=$1 -o $domain/sources/subfinder.txt
-assestfinder -subs-only domain=$1 | tee $domain/sources/hackerone.txt
-amass enum -passive domain=$1 -o $domain/sources/passive.txt
+subdinder -d domain=$1 -o $domain/sources/subfinder.txt | notify
+assestfinder -subs-only domain=$1 | tee $domain/sources/hackerone.txt | notify
+amass enum -passive domain=$1 -o $domain/sources/passive.txt | notify
 
 #Active Enumeration using brutefoorce
 shuffledns -d $domain -w $wordlist -r $resolvers -o $domain/suffledns.txt
