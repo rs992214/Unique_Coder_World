@@ -5,7 +5,6 @@ wordlist="/root/dict./SecLists/Discovery/DNS/fierce-hostlist.txt"
 resolvers="/root/recon/dnsvalidator/resolvers.txt"
 
 domain_enum(){
-
 mkdir -p $domain $domain/sources $domain/Recon $domain/Recon/nuclei $domain/Recon/URLs $domain/Recon/Gf-Patterns $domain/Recon/PortScan $domain/Recon/jaeles $domain/Recon/js/
 
 subfinder -d $domain -o $domain/sources/subfinder.txt
