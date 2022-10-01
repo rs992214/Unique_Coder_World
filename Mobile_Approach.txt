@@ -58,3 +58,5 @@ Tech code hain
            
            Tools:
            Frida, mobsf, jd-gui, dex to jar , 
+           MOBSF, DROZER
+           
