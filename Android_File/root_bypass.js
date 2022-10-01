@@ -1,4 +1,4 @@
-// $ frida -l antiroot.js -U -f com.example.app --no-pause
+// $ frida -l antiroot.js -U -f com.example.app --no-pause -- Command for frida--
 // CHANGELOG by Pichaya Morimoto (p.morimoto@sth.sh): 
 //  - I added extra whitelisted items to deal with the latest versions 
 // 	of RootBeer/Cordova iRoot as of August 6, 2019
