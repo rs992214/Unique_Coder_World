@@ -2,7 +2,7 @@ Basics learning of API for beginners.
 
 What is API?
 
-API stands for — Application programming interface. It is a means of communication between your application and other applications based on a set of rules.
+API stands for : Application programming interface. It is a means of communication between your application and other applications based on a set of rules.
 
 API security is nothing but securing the API endpoints from attackers. A vulnerable API could lead to:
 
