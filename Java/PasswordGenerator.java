@@ -17,6 +17,8 @@ class PasswordGen {
         String lower = "abcdefghijklmnopqrstuvwxyz";
         String numbers = "0123456789";
         String specialChars = "!@#$%^&*(){}?";
+        
+        // define string variables and valueset
 
         String allChars = upper + lower + numbers + specialChars;
 
