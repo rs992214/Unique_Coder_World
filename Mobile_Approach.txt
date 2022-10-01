@@ -55,3 +55,6 @@ Tech code hain
            d. In settings go security - install from storage device.  
            
            We can other tools as well to pentest mobile with virtualization such as androidStudio, NOX, Genymotion etc
+           
+           Tools:
+           Frida, mobsf, jd-gui, dex to jar , 
