@@ -11,6 +11,6 @@ n = len(arr)
 
 result = search(arr, n, x)
 if(result == -1):
-	print("Element is not present in array")
+	print("Element is not present in the arry bhai sahab")
 else:
 	print("Element is present at index", result)
