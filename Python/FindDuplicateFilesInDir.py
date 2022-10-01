@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 '''
-A python script to get duplicate files by comparing hashes of files in all sub-directories of a directory
+A python script to get duplicate files by comparing hashes of files in all sub-directories of a directory Rahul main ne changes keya hai kesse ko bata na mat. aapne main rakh na.
 '''
 
 import hashlib
