@@ -6,7 +6,7 @@ def validateLogin(username, password):
 	print("password entered :", password.get())
 	return
 
-#window
+#windows
 tkWindow = Tk()  
 tkWindow.geometry('400x150')  
 tkWindow.title('Tkinter Login Form - pythonexamples.org')
