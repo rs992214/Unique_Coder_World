@@ -28,7 +28,7 @@ However, what if you are not using the airline’s website — a channel that ha
  such as Kayak or Expedia, which aggregates information from a number of airline databases?
 
 
-The travel service, in this case, interacts with the airline’s API. The API is the interface that, like your helpful waiter, 
+The travel service, in this case,  interacts with the airline’s API. The API is the interface that, like your helpful waiter, 
 can be asked by that online travel service to get information from the airline’s database to book seats, baggage options, etc.
  The API then takes the airline’s response to your request and delivers it right back to the online travel service, which then shows you the most updated,
 relevant information.
