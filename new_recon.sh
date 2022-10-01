@@ -7,10 +7,10 @@ resolvers="/root/recon/dnsvalidator/resolvers.txt"
 domain_enum(){
 mkdir -p $domain $domain/sources $domain/Recon $domain/Recon/nuclei $domain/Recon/URLs $domain/Recon/Gf-Patterns $domain/Recon/PortScan $domain/Recon/jaeles $domain/Recon/js/
 
-subfinder -d $domain -o $domain/sources/subfinder.txt
-assetfinder -subs-only $domain | tee $domain/sources/assetfinder.txt
-amass enum -passive -d $domain -o $domain/sources/passive.txt
-shuffledns -d $domain -w $wordlist -r $resolvers -o $domain/sources/shufflends.txt
+subfinder -d $domain -o $domain/sources/subfinder.txt | notify
+assetfinder -subs-only $domain | tee $domain/sources/assetfinder.txt| notify
+amass enum -passive -d $domain -o $domain/sources/passive.txt| notify
+shuffledns -d $domain -w $wordlist -r $resolvers -o $domain/sources/shufflends.txt| notify
 
 cat $domain/sources/*.txt > $domain/sources/all.txt
 }
