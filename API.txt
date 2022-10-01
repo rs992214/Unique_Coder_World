@@ -12,7 +12,7 @@ o Data leakages
 
 o Sanctioning Fuzzy input
 
-o Injection Vulnerabilities
+o code & Injection Vulnerabilities
 
 o Parameter Tampering, etc.
 
