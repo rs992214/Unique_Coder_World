@@ -1,0 +1,248 @@
+Secure Code Analysis:
+
+Content:
+Introduction to Secuer Code review:
+Fortify tools and installation
+Audit Workbench
+Code scanning using scan wizard
+Command Line scan
+Visual Studio Integration of Fority and Scan
+What is SSC server and Basic Overview
+FPR Analysis
+Walkthrough of Findings - Low, Medium and High
+Report Extracted from FPR
+-------------------------------------------------------------------------------
+OWASP CATEGORY:
+A1: Injection
+A2: Broken Authentication
+A3: Sensitive Data Exposure
+A4: XML External Entities (XXE)
+A5: Broken Access control
+A6: Security misconfigurations
+A7: Cross Site Scripting (XSS)
+A8: Insecure Deserialization
+A9: Using Components with known vulnerabilities
+A10: Insufficient logging and monitoring
+--------------------------------------------------------------------------------
+Secure Coding Guidelines:
+Here are 22 tips to write safer applications. These improve the security of your application and provide you with
+multiple layers of defense.
+1.Validate all inputs at the server
+2.Prefer white lists to black lists
+3.Escape special characters
+4.Use prepared statements in database queries
+5.Use strong, random session tokens
+6.Use a hidden token in transaction requests
+7.Never store secrets in hidden fields/cookies
+8.Use cache-control directives to prevent sensitive data being cached
+9.Set session cookie to HTTPOnly
+10.Set the path attribute for cookies
+11.Set autocomplete=off
+12.Use HTTP redirection during login
+13.Invalidate sessions on logout
+14.Forcefully log out the user when suspicious events occur
+15.Log failures in the audit log
+16.Do not hard code the database password
+17.Use standard crypto algorithms and libraries
+18.Use SSL for transmission of all sensitive data
+19.Store passwords as salted hashes
+20.Use try...catch...finally to handle exceptions
+21.Define and use custom error pages
+22.Train your developers in secure coding
+-------------------------------------------------------------------------------------------------
+Findings:
+High:
+Cross-Site Scripting (XSS) 
+CSRF
+SQL
+XXE
+
+
+Medium:
+Use of Hardcoded Cryptographic Key
+The application is vulnerable to a URL redirection flaw
+Password In Configuration File
+Potential File Upload
+
+Low:
+ErrorHandling.RevealsDetails.Message
+Using known vulnerable components
+Debug Enabled
+Older version of Application Framework used
+Developer Comments Revealed
+Session cookie attributes are not set properly
+Print Stack Trace used in application source Code
+Application Test Script Detected
+Improper Exception Handling
+Improper input validation
+------------------------------------------------------------------------------------------------
+Manual Secure Code Anlysis:
+1.Before intiating the testing we should know the type
+of application whether it is java,aspx,php,SQL etc
+
+2.Secondly we should known the know the purpose of the application
+like payment, billing, form , maker-checker so that we can look for 
+logical functionality.
+
+3. The Application owner or the developer will provide 
+you all the source code prequiste including the 
+web.config file, . 
+
+4. The web.config file is the configuration file of the
+application where all basic settings of servers are 
+associated with like Headers implementation.
+-------------------------------------------------------------------------------------------------
+Findings to Look in web.config file are: 
+1. Password In Configuration File - Press Ctrl +F and search for uid/pwd:
+2. ErrorHandling.RevealsDetails.Message - Press Ctrl +F and search for customerrors
+ (If custom error are off then error page will reveal sensitive information)
+3. DEBUG enabled - Press Ctrl +F and search for debug="true"
+4. Older version of Application Framework used -  Press Ctrl +F and search for targetFramework
+  (If Target Framework is 4.0 or less than that is older version, Target framework is 
+  basically the .Net Framework version and its version depends upon the application)
+5. Server Banner like Asp version, X-Asp version and server version - Press Ctrl +F and search for 
+   X-Powered By, Server:. X-Asp
+6. Web Server HTTP Dangerous Method Detection: In web.config file search for Acess-Allow-Control-Methods.
+7. HTML5 cross-origin resource sharing: In web.config file search for Access-Control-Allow-Origin
+
+
+
+-----------------------------------------------------------------------------------------------------
+1. Use of Hardcoded Cryptographic Key: Press Ctrl +F and search for encryptionkey/encryption_key throughout all source code
+
+2. The application is vulnerable to a URL redirection flaw : Press Ctrl +F and search for Response.Eedirect
+  (if the query is Response.Redirect(Raw.URL); then it is possible for open redirection)
+
+3. Potential File Upload: Press Ctrl +F and search for FileUpload throughout all source code
+  (In some cases the type of file upload like aspx, png, jpeg, php is specified)
+
+4. Using known vulnerable components: If the application source code has any vulnerable version of jquery, bootstarp or anyother
+
+5. Developer Comments: Look for some senstive data throught the application code like database password, 
+                    default credentials
+
+6. Password is encoded/encrypted using weak algorithm: Press Ctrl +F and search for String password (for java)
+     If the application is using the MD5 algorithm then it is weak
+
+7. Use of Cryptographically Weak PRNG: Search for random rand in the Rndstring.java
+
+8. Application uses default FTP Anonymous Login: Press Ctrl +F and search for anonymousAuthentication
+      (In the source code it will be like anonymousAuthentication enabled="true")
+
+9. Improper Exception Handling : Example is like system.out.println("Exception :")
+
+10. An adversary can trick the user into visiting a fake site via a Response-Splitting: look for response.setheader in source code
+
+11. Use of Hardcoded Credentials : In the datbase source code file like Dbacess.java search for user/password or databaseName or userid/pwd
+SDE
+
+12. An adversary can get access to sensitive details in logs : Search for logger.lof throughout the source code.
+
+13. Print Stack Trace used in application source Code: Search for PrintStackTrace/StackTrace throughtout the source code of Appn:
+
+14. Obsolete files are present in the application: Miscellenous include files, backup, unused or obsolete files exist 
+                                                   as indicated. If these files contain program source, information such 
+												   as server logic or ODBC/JDBC user ID and passwords may be revealed since
+												   these file extension may not be processed by the web server.
+
+15. Password In Configuration File: Search for username/password throughout the source code.
+
+16. The application prints sensitive information in application console. For java based application the finding wll be like:
+                System.out.println("" + userid + pwd);
+
+17. Weak Cryptography/Password is encrypted/encoded using weak algorithm : Look whether the application supports
+                                                                          weak algorithms like md5 , search for md5 in the source code
+
+18. The application has a weak password policy: Search for password/pwd ex: pwd: "123456"
+
+19. Default Credentials
+
+20. Session cookie attributes are not set properly:  Search for the attributes like secure, domain, path in main.java or main.php
+
+21. LDAP Injection attack might be possible on the application : Search for ldap throughout the source code and check if username 
+                                                                and password is in the same query
+
+22. Application Test Script Detected: The application is still using old files like web.old.config or err.text 
+
+23. Insecure String Object : Search for string username in the source code . Here the string query like username or password 
+                             is not encrypted but in simple format
+24. Unreleased Resource							 
+------------------------------------------------------------------------------------------------------
+For Mobile Applications:
+The Android Manifest xml,yml and other source code files will be provided:
+1.Application has set insecure permissions
+
+
+------------------------------------------------------------------------------------------------------
+Secure Code Analysis:
+Secure code review is the process of auditing the source code for
+an application to verify that the proper security controls are 
+present, that they works as intended, and that they have been
+invoked in all the right places.
+
+SCA is a set of softwares security analyzers that search for violations 
+of security- specific coding rules and guidilines in a variety of 
+languages.
+
+SAST- Static Application Testing 
+DAST- Dynmaic Application Testing
+SCA- Static Code Analyzer
+Vulnerability - Defect or a security flaw in the system that 
+can be exploited for malicious intentions
+Exploits: Exploitation of the vulnerability by piece of code 
+referred as exploits
+
+Myths - Secure Code Review
+Static code analysis has nothing to do with develeoper
+developer background, just a basic knowledge of code/lofic 
+will workout. Nowadays static code tools are user friendly 
+that it gives t details about flaw with the code flow.
+
+As a code reviewer you are expected to point out possible 
+flaws/vulnerabilities that creates loopholes in the 
+application.
+
+
+Open Source Tools 
+1. Find Bugs - For Java
+2. Sonarqube - IDE Integration
+3. Roslyn Security Guard - best for Dot net
+4. Find Security Bugs - Python (best), .net/java/php/C++
+5. Visual Code Grepper - Manual Code Analysis (Beet)
+
+Licensed SCA Tools :
+Veracode 
+CheckMarx
+Fortify
+IBM Appscan 
+
+
+Audit WorkBench:
+It is A GUI based component use for FPR analysis,
+FPR stands for Fortify Project Report, the audit workbench 
+is mainly used for scanning and to find out the false positive
+in the source code.
+
+BIRT (Business Intelligence and Reporting Tools)
+It is an open souce technology platform by thr Eclipse 
+foundation which is basically used to generate the scan 
+reports.
+
+Custom Rules Editor:
+It is used to filter out or to apply some rules to the scan
+project.
+
+Scan wizard is a command line utility which is used to
+invoke your scans by command and also has a GUI. It basically
+shows file level categorization then generates a bat/sh file
+for scanning.
+
+SCA state is used to monitor your scans and also to schedule 
+your scan. It also shows the errors generated during the scans 
+
+Main items :
+Audit Workbench
+Scan Wizard
+source analyzer
+
+
