@@ -6,6 +6,8 @@ For XSS search <%== This is used to print in the response and check user input d
 For SQL search sql, execute query, query and check user input directly going in sql query and there is no parametarised query used.
 
 search for SSRF .openconnection and check user input is used to to make server to server call.
+
+For os command injection check user input being used runtime execution
 ----------------------------------
 Secure Code Analysis:
 
