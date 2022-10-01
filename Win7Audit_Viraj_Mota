@@ -74,7 +74,7 @@ if($X -GT $A -eq 'False')
 else
 {
 
-    Write-Warning "You Can Continue With Your License"
+    Write-Warning "You Can Continue With License"
     sleep -s 2
 }
 
