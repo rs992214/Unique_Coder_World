@@ -13,7 +13,7 @@ assestfinder -subs-only domain=$1 | tee $domain/sources/hackerone.txt
 amass enum -passive domain=$1 -o $domain/sources/passive.txt
 
 #Active Enumeration using brutefoorce
-shuffledns -d $domain -w $wordlist -r $resolvers -o $domain/sources/suffledns.txt
+shuffledns -d $domain -w $wordlist -r $resolvers -o $domain/suffledns.txt
 
 cat $domain/sources/*.txt > $domain/sources/all.txt
 
