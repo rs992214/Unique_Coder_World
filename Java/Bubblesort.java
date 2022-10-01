@@ -33,6 +33,8 @@ public class Bubblesort {
 					array[j] = temp;  
 				    System.out.println(array[j]  + " is greater than " + array[j-1]);
 				    System.out.println("Swapping Elements: New Array After Swap");
+					
+				// It is used to print array.
 					printArray(array);
 				}  
  
