@@ -1,7 +1,7 @@
 Mobile App Testing Approach - (Static and Dynamic)
 
 
-Tech code ahe 
+Tech code hain 
         1. first we get the .apk application file
         2. then its is converted to .zip extension
         3. then the file is extracted 
