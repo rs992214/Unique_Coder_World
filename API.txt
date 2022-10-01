@@ -282,7 +282,7 @@ Processing
 
 · Do not forget to turn the DEBUG mode OFF.
 
-Output
+Output :
 
 · Send X-Content-Type-Options: nosniff header.
 
