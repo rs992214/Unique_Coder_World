@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ 
 domain=$1
 wordlist="/root/dict./SecLists/Discovery/DNS/fierce-hostlist.txt"
 resolvers="/root/recon/dnsvalidator/resolvers.txt"
