@@ -41,4 +41,4 @@ rm sublist3r.txt assetfinder.txt
 
 #subfinder
 
-echo "target.com" | subfinder -q -o Output.txt
+echo "target.com" | subfinder -q -o Output.txt #output will be saved in text file
