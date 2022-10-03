@@ -10,7 +10,7 @@
 #>
 
 [Console]::ForegroundColor="White"
-[Console]::BackGroundColor="Black"
+[Console]::BackGroundColor="Red"
 <#
 [System.String]$scriptDirectoryPath  = split-path -parent $MyInvocation.MyCommand.Definition
 [System.String]$secpolFilePath       = join-path $scriptDirectoryPath "secedit.log"
