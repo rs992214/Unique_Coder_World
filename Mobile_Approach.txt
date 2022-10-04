@@ -59,4 +59,4 @@ Tech code hain
            Tools:
            Frida, mobsf, jd-gui, dex to jar , 
            MOBSF, DROZER
-           
+           main vinit don hu kalyan cha bodybuilder
