@@ -12,3 +12,4 @@
 <img/src=x onmouseover=alert(1)>
 <img/src=x onclick=alert(1)>
 <script>javascript:alert(1)<\x00/script>
+main vinit don hu kalyan cha bodybuilder
