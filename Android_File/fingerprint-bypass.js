@@ -12,7 +12,7 @@ Java.perform(function () {
     try { hookBiometricPrompt_authenticate2(); }
     catch (error) { console.log("hookBiometricPrompt_authenticate not supported on this android version") }
     try { hookFingerprintManagerCompat_authenticate(); }
-    catch (error) { console.log("hookFingerprintManagerCompat_authenticate failed"); }
+    catch (error) { console.log("hokFingerprintManagerCompat_authenticate failed"); }
     try { hookFingerprintManager_authenticate(); }
     catch (error) { console.log("hookFingerprintManager_authenticate failed"); }
 });
