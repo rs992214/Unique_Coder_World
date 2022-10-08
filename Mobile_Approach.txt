@@ -58,5 +58,5 @@ Tech code hain
            
            Tools:
            Frida, mobsf, jd-gui, dex to jar , 
-           MOBSF, DROZER
+           MOBSF, DROZER, jadx, xposed framework, magisk
            main vinit don hu kalyan cha bodybuilder
