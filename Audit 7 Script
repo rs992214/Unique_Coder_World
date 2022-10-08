@@ -12,7 +12,7 @@
 [Console]::ForegroundColor="White"
 [Console]::BackGroundColor="Black"
 <#
-[System.String]$scriptDirectoryPath  = split-path -parent $MyInvocation.MyCommand.Definition
+[System.Strig]$scriptDirectoryPath  = split-path -parent $MyInvocation.MyCommand.Definition
 [System.String]$secpolFilePath       = join-path $scriptDirectoryPath "secedit.log"
 [System.String]$reportFilePath       = join-path $scriptDirectoryPath "report-$env:COMPUTERNAME.txt"
 [System.String]$exceptionsFilePath   = join-path $scriptDirectoryPath "exceptions-$env:COMPUTERNAME.txt"
