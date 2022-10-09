@@ -18,12 +18,10 @@ Java.perform(function () {
 });
 
 
-
 var cipherList = [];
 var StringCls = null;
 Java.perform(function () {
     StringCls = Java.use('java.lang.String');
-
 
 });
 
@@ -144,7 +142,7 @@ Error: authenticate(): has more than one overload, use .overload(<signature>) to
             return
         }
     }
-    console.log("Hooking FingerprintManager.authenticate()...");
+    console.log("Hooking FingerprintManager.authenticate()......");
 
     var fingerprintManager_authenticate = fingerprintManager['authenticate'].overload('android.hardware.fingerprint.FingerprintManager$CryptoObject', 'android.os.CancellationSignal', 'int', 'android.hardware.fingerprint.FingerprintManager$AuthenticationCallback', 'android.os.Handler');
     fingerprintManager_authenticate.implementation = function (crypto, cancel, flags, callback, handler) {
