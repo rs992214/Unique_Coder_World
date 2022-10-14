@@ -7,5 +7,6 @@ def convertToBinary(n):
 
 dec = 34
 
-convertToBinary(dec)
-print()
+convertToBinary(dec) //function call
+
+print() 
