@@ -4,4 +4,4 @@ def file_len(fname):
             pass
     return i + 1
 
-print(file_len("my_file.txt"))
+print(file_len("my_file.txt"))  //print the lenght of text in file
