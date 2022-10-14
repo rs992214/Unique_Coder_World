@@ -1,0 +1,105 @@
+import java.util.Scanner;
+
+public class TicTakToe  {
+    Scanner sc = new Scanner(System.in);
+
+    public void startGame() throws Exception{
+        char [][]array = {{' ',' ',' '},{' ',' ',' '},{' ',' ',' '}};
+        
+        displayBoard(array);
+        array = manageGame(array);
+        evaluateResult(array);
+    }
+
+    public char[][] manageGame(char[][]array) throws Exception{
+        int pos=0;
+        boolean player=true;
+
+        do {
+            if(player){
+                System.out.println("Player 1: X");
+            }
+            else{
+                System.out.println("Player 2: O");
+            }
+            System.out.print("Enter the position from 1 to 9: ");
+            pos = sc.nextInt();
+
+            if(!checkPositionAvailability(array, pos)){
+                System.out.println("\n"+ pos +" is not valid...");
+                continue;
+            }
+
+            if(player){
+                array = generateArray('X', pos, array);
+            }
+            else{
+                array = generateArray('O', pos, array);
+            }
+            player=!player;
+            if(isFull(array))
+                return array;
+
+        } while (true);
+    }
+
+    public boolean checkPositionAvailability(char[][] array, int pos){
+        pos-=1;
+        int i=pos/3;
+        int j=pos%3;
+
+        System.out.println(pos);
+        if(pos>8 || array[i][j]!=' ')
+            return false;
+
+        return true;
+    }
+    
+    public char[][] generateArray(char ch, int pos, char array[][]) throws Exception{
+        pos-=1;
+        int i=pos/3;
+        int j=pos%3;
+        
+        array[i][j] = ch;
+
+        displayBoard(array);
+        return(array);
+
+    }
+
+    
+    public void displayBoard(char array[][]) throws Exception{
+        new ProcessBuilder("cmd.exe", "/c", "cls").inheritIO().start().waitFor();
+        
+        System.out.println("*---*---*---*");
+        for(int i=0; i<3; i++){
+            System.out.print("| ");
+            for(int j=0; j<3; j++){
+                System.out.print(array[i][j] + " | ");
+            }
+            System.out.println();
+            System.out.println("*---*---*---*");
+        }
+    }
+
+    public boolean isFull(char [][] array){
+        for(int i=0; i<3; i++){;
+            for(int j=0; j<3; j++){
+                if(array[i][j]==' ')
+                    return false;
+            }
+        }
+        return true;
+
+    }
+
+    public void evaluateResult(char [][] array){
+        System.out.println("Your game is finished and the winner is....");
+    }
+    
+    public static void main(String[] args) throws Exception{
+        TicTakToe t = new TicTakToe();
+        t.startGame();
+    }
+    
+}
