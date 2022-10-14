@@ -327,3 +327,6 @@ Or viraj bhai kaise ho. sab badheya hai na. NSS paise paisa badh raha hai na! Do
 main hu gaurav
 
 Refer OWASP API top ten for vulnerabilities.
+
+
+#https://medium.com/system-weakness/introduction-to-api-penetration-testing-modern-approaches-and-techniques-b8d8c1f7076c
