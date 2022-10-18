@@ -1,0 +1,28 @@
+# This program converts an image to pencil sketch
+import cv2
+
+# get the image location and the image file name
+img_location = ''your image
+filename = 'my pic.jpg'
+
+# Read in the image
+img = cv2.imread(img_location+filename)
+# Convert the image to gray scale
+gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# invert the image
+inverted_gray_image = 255 - gray_image
+
+#Blur the image
+blurred_image = cv2.GaussianBlur(inverted_gray_image, (21,21), 0)
+
+# Invert the blured image
+inverted_blurred_image = 255 - blurred_image
+
+#Create the pencil sketch image
+pencil_sketch_image = cv2.divide(gray_image, inverted_blurred_image, scale=256.0)
+
+#show the image
+cv2.imshow('original Image', img)
+cv2.imshow('New Image', pencil_sketch_image)
+cv2.waitKey(0)
