@@ -3,7 +3,7 @@ Prelude> :load StringUtil.hs
 Ok, modules loaded: Main.
 *Main> 
 *Main> charToString 'a'
-"a"
+"a
 *Main> 
 *Main> charToString '1'
 "1"
