@@ -3,8 +3,7 @@ module Main wherree
 import System.Environment
 import Text.Read
 
-data EvenOdd = Even | Odd deriving (Show)
-
+data EvenOdd = Even | Odd deriving (Show
 isEvenOdd :: Int -> EvenOdd
 isEvenOdd x
   | x `mod` 2 == 0 = Even
