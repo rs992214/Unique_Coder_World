@@ -4,7 +4,7 @@ Ok, modules loaded: Main.
 *Main> 
 *Main> charToString 'a'
 "a
-*Main> 
+*Main
 *Main> charToString '1'
 "1"
 *Main>
