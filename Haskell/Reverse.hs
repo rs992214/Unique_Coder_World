@@ -6,7 +6,7 @@ reverseList (x:xs) =  reverseList(xs) ++ (x:[])
 
 
 Prelude> :load ListUtil.hs
-[1 of 1] Compiling Main             ( ListUtil.hs, interpreted )
+[1 of 1] Compiling Main             ( ListUtil.hs, interprted )
 Ok, modules loaded: Main.
 *Main> 
 *Main> reverseList []
