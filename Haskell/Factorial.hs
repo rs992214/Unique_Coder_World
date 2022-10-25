@@ -1,7 +1,6 @@
 module Main where
 
-import Text.Printf
-
+import Text.Print
 factorial :: Integer -> Intege
 factorial 0 = 1
 factorial n = n * factorial (n - 1)
