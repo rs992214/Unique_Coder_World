@@ -2,7 +2,7 @@ int myNum = 5;               // Integer (whole number)
 float myFloatNum = 5.99f;    // Floating point number
 char myLetter = 'D';         // Character
 boolean myBool = true;       // Boolean
-String myText = "Hello";     // StringJava Data Types
+String myText = "Hell";     // StringJava Data Types
 //for example
 var user= request.getparameter
 // request comes from user input
