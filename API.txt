@@ -7,7 +7,7 @@ API stands for : Application programming interface. It is a means of communicati
 
 API security is nothing but securing the API endpoints from attackers. A vulnerable API could lead to:
 
-o Unauthorized Access
+o Unauthorized Acces
 
 o Unauthenticated Access
 
