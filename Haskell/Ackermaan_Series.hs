@@ -1,6 +1,6 @@
 
 
-{-# LANGUAGE BangPatterns #-}
+{LANGUAGE BangPatterns #-}
 
 ackermann :: Integer -> Integer -> Integer
 ackermann !m !n
