@@ -1,60 +1,74 @@
-import java.util.Arrays;
+// Java program for implementation of Heap Sort 
+public class HeapSort 
+{ 
+	public void sort(int arr[]) 
+	{ 
+		int n = arr.length; 
 
-public class HeapSort {
+		// Build heap (rearrange array) 
+		for (int i = n / 2 - 1; i >= 0; i--) 
+			heapify(arr, n, i); 
 
- public void sort(int arrA[]) {
- int size = arrA.length;
+		// One by one extract an element from heap 
+		for (int i=n-1; i>=0; i--) 
+		{ 
+			// Move current root to end 
+			int temp = arr[0]; 
+			arr[0] = arr[i]; 
+			arr[i] = temp; 
 
- // Build heap
- for (int i = size / 2 – 1; i >= 0; i—)
- heapify(arrA, size, i);
+			// call max heapify on the reduced heap 
+			heapify(arr, i, 0); 
+		} 
+	} 
 
- // One by one extract (Max) an element from heap and
- // replace it with the last element in the array
- for (int i=size–1; i>=0; i—) {
+	// To heapify a subtree rooted with node i which is 
+	// an index in arr[]. n is size of heap 
+	void heapify(int arr[], int n, int i) 
+	{ 
+		int largest = i; // Initialize largest as root 
+		int l = 2*i + 1; // left = 2*i + 1 
+		int r = 2*i + 2; // right = 2*i + 2 
 
- //arrA[0] is a root of the heap and is the max element in heap
- int x = arrA[0];
- arrA[0] = arrA[i];
- arrA[i] = x;
+		// If left child is larger than root 
+		if (l < n && arr[l] > arr[largest]) 
+			largest = l; 
 
- // call max heapify on the reduced heap
- heapify(arrA, i, 0);
- }
- }
+		// If right child is larger than largest so far 
+		if (r < n && arr[r] > arr[largest]) 
+			largest = r; 
 
- // To heapify a subtree with node i
- void heapify(int arrA[], int heapSize, int i) {
- int largest = i; // Initialize largest as root
- int leftChildIdx = 2*i + 1; // left = 2*i + 1
- int rightChildIdx = 2*i + 2; // right = 2*i + 2
+		// If largest is not root 
+		if (largest != i) 
+		{ 
+			int swap = arr[i]; 
+			arr[i] = arr[largest]; 
+			arr[largest] = swap; 
 
- // If left child is larger than root
- if (leftChildIdx < heapSize && arrA[leftChildIdx ] > arrA[largest])
- largest = leftChildIdx ;
+			// Recursively heapify the affected sub-tree 
+			heapify(arr, n, largest); 
+		} 
+	} 
 
- // If right child is larger than largest so far
- if (rightChildIdx < heapSize && arrA[rightChildIdx ] > arrA[largest])
- largest = rightChildIdx ;
+	/* A utility function to print array of size n */
+	static void printArray(int arr[]) 
+	{ 
+		int n = arr.length; 
+		for (int i=0; i<n; ++i) 
+			System.out.print(arr[i]+" "); 
+		System.out.println(); 
+	} 
 
- // If largest is not root
- if (largest != i) {
- int swap = arrA[i];
- arrA[i] = arrA[largest];
- arrA[largest] = swap;
+	// Driver program 
+	public static void main(String args[]) 
+	{ 
+		int arr[] = {12, 11, 13, 5, 6, 7}; 
+		int n = arr.length; 
 
- // Recursive call to heapify the sub-tree
- heapify(arrA, heapSize, largest);
- }
- }
+		HeapSort ob = new HeapSort(); 
+		ob.sort(arr); 
 
- public static void main(String args[]) {
- int arrA[] = {9, 10, 5, 3, 1, 2, 6};
-
- System.out.println("Original array is: " + Arrays.toString(arrA));
- HeapSort heapSort = new HeapSort();
- heapSort.sort(arrA);
-
- System.out.println("Sorted array is (Heap Sort): " + Arrays.toString(arrA));
- }
-}
+		System.out.println("Sorted array is"); 
+		printArray(arr); 
+	} 
+} 
