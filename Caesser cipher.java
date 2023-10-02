@@ -11,7 +11,7 @@ class CaesarCipher
 			{
 				char ch = (char)(((int)text.charAt(i) +
 								s - 65) % 26 + 65);
-				result.append(ch);
+				result.append(c);
 			}
 			else
 			{
