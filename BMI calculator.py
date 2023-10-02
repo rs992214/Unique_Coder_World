@@ -6,7 +6,7 @@ the_BMI = the_weight / (the_height/100)**2
 # printing the BMI  
 print("Your Body Mass Index is", the_BMI)  
 # using the if-elif-else conditions  
-if the_BMI <= 18.5:  
+if the_BMI <= 20.5:  
     print("Oops! You are underweight.")  
 elif the_BMI <= 22.9:  
     print("Awesome! You are healthy.")  
