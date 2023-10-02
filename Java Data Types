@@ -4,5 +4,5 @@ char myLetter = 'D';         // Character
 boolean myBool = true;       // Boolean
 String myText = "Hello";     // StringJava Data Types
 //for example
-var user= (etc)request.getparameter
+var user= request.getparameter
 // request comes from user input
