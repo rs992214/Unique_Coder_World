@@ -18,6 +18,6 @@ main :: IO ()
 main = do
   args <- getArgs
   let x = headMaybe args
-  case x >>= readMaybe of
+  case x >>= readMaybe 
     Nothing -> putStrLn "Usage: please input a number"
     Just x  -> putStrLn $ show $ isEvenOdd x
