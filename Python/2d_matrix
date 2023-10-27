@@ -1,0 +1,14 @@
+column_size = int(input("Enter size of column: "))
+row_size = int(input("Enter size of row: "))
+#Declaring an empty 1D array.
+a = []
+#Declaring an empty 1D array.
+b = []
+#Initialize the column.
+for j in range(0, column_size):
+    b.append(0)
+#Append the column to each row.
+for i in range(0, row_size):
+    a.append(b)
+#Printing the 2d created array
+print(a)
